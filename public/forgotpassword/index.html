@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RepRob | Password dimenticata</title>
+        <meta name="description" content="App per inviare le catene del RepartoRoboris">
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+      
+        <link rel="stylesheet" href="/styles/index.css">
+
+        <script src="/scripts/registersw.js"></script>
+    </head>
+    <body>
+        <div id="message">
+            <h1>Recupero della password</h1>
+            <p>Inserisci la tua email</p>
+            <div class="omrs-input-group">
+                <label id="namelbl" class="omrs-input-filled">
+                    <input class="Email" oninput="
+                        const userlbl = document.getElementById('namelbl');
+                        userlbl.classList.remove('omrs-input-danger');
+                    ">
+                    <span class="omrs-input-label">Email</span>
+                    <div class="omrs-underline"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle cx="15.5" cy="9.5" r="1.5"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-6c.78 2.34 2.72 4 5 4s4.22-1.66 5-4H7z"/></svg>
+                </label>
+            </div>      
+            <a class="Button" onclick="resetPassword()" >Recupera password</a>
+        </div>
+    </body>
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyCVxbDM1zr0FPpNr-FuYgNaFQVkS4t9N7g",
+          authDomain: "repartoroboris-b18ef.firebaseapp.com",
+          databaseURL: "https://repartoroboris-b18ef-default-rtdb.europe-west1.firebasedatabase.app",
+          projectId: "repartoroboris-b18ef",
+          storageBucket: "repartoroboris-b18ef.appspot.com",
+          messagingSenderId: "1085078472479",
+          appId: "1:1085078472479:web:0c78de56a92da899c7d22a",
+          measurementId: "G-6NBCCXKKLV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+    </script>
+    <script src="/scripts/forgotpassword.js"></script>
+</html>

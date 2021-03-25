@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Anti Bullismo | Offline </title>
+        <link rel="stylesheet" href="/styles/index.css">
+    </head>
+    <body>
+        <div id="message">
+            <h1>Oops...</h1>
+            <p>C'è stato un errore</p>
+            <a class="Button" id="loginBtn" onclick="
+                if(navigator.onLine){
+                    window.location.href = '/';
+                }
+                else{
+                    window.location.reload();
+                }
+            ">Ricarica</a>
+        </div>
+    </body>
+</html>

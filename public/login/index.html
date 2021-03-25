@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contrastare il bullismo</title>
+        <meta name="description" content="App dedica a descrirre e contrastare il bullismo">
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <meta http-equiv="Cache-control" content="no-cache">
+        <meta http-equiv="Expires" content="-1">
+      
+        <link rel="stylesheet" href="/styles/index.css">
+
+
+    </head>
+    <body>
+        <div id="message">
+            <h2>Benvenuto</h2>
+            <h1>Per comunicare con noi devi accedere con le tue credenziali</h1>
+            <div class="omrs-input-group">
+	  	  	  	  <label id="namelbl" class="omrs-input-filled">
+	  	  	  	      <input class="Username" oninput="
+                      const userlbl = document.getElementById('namelbl');
+                      const passlbl = document.getElementById('passlbl');
+
+                      userlbl.classList.remove('omrs-input-danger');
+                      passlbl.classList.remove('omrs-input-danger');
+                    ">
+                            <span class="omrs-input-label">Email</span>
+                    <div class="omrs-underline"></div>
+	  	  	  	    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle cx="15.5" cy="9.5" r="1.5"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-5-6c.78 2.34 2.72 4 5 4s4.22-1.66 5-4H7z"/></svg>
+	  	  	  	  </label>
+            </div>
+            <div class="omrs-input-group">
+	  	  	  	<label id="passlbl" class="omrs-input-filled">
+                    <input class="Password" oninput="
+                        const userlbl = document.getElementById('namelbl');
+                        const passlbl = document.getElementById('passlbl');
+                
+                        userlbl.classList.remove('omrs-input-danger');
+                        passlbl.classList.remove('omrs-input-danger');
+                    ">
+                    <span class="omrs-input-label">Password</span>
+                <div class="omrs-underline"></div>
+                        
+	  	  	  	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><style type="text/css">
+                    .st0{stroke:#000000;stroke-width:0.35;stroke-miterlimit:10;}
+                </style><path class="st0" d="M16.4,20c-0.2,0-0.3-0.1-0.4-0.2l-0.2-0.2l-1.4,0c-0.5,0-1-0.4-1-0.9l0-0.8l-0.7,0c0,0,0,0,0,0
+                    c-0.5,0-0.9-0.4-1-0.9l0-0.8l-0.7,0c0,0,0,0,0,0c-0.5,0-0.9-0.4-1-0.9l0-1.5c-0.1-0.1-0.4-0.4-0.6-0.6c-0.2,0.1-0.5,0.2-0.8,0.2
+                    c-0.4,0-0.8-0.2-1.1-0.5c0,0,0,0,0,0c0,0-0.1-0.1-0.1-0.1c-0.2,0-0.5,0-0.7,0c-1.7,0-3.3-0.7-4.6-1.9c-2.5-2.5-2.5-6.6,0-9.2
+                    C3.1,0.7,4.7,0,6.4,0S9.8,0.7,11,1.9c1.5,1.5,2.1,3.6,1.8,5.6c0.2,0.3,0.3,0.6,0.3,0.9c0,0.3,0,0.5-0.2,0.8l6.9,6.9
+                    c0.1,0.1,0.2,0.3,0.2,0.4l0,1.7c0,0.9-0.7,1.7-1.6,1.7L16.4,20C16.4,20,16.4,20,16.4,20z M16,18.4c0.2,0,0.3,0.1,0.4,0.2l0.2,0.2
+                    l1.8-0.1c0.2,0,0.4-0.2,0.4-0.4l0-1.5l-7-7c-0.1-0.1-0.2-0.2-0.2-0.3l0-0.2c0-0.2,0-0.4,0.2-0.5c0.1-0.1,0.1-0.2,0.1-0.3
+                    c0-0.1,0-0.2-0.1-0.3c-0.2-0.1-0.2-0.4-0.2-0.6c0.4-1.7-0.2-3.5-1.4-4.8c-1-1-2.3-1.5-3.7-1.5S3.8,1.8,2.8,2.8c-2,2-2,5.4,0,7.4
+                    c1,1,2.3,1.5,3.7,1.5c0.3,0,0.7,0,1-0.1c0.3-0.1,0.5,0.1,0.7,0.3c0,0.1,0,0.3,0.3,0.3c0.1,0,0.2,0,0.3-0.1l0.1-0.1
+                    c0.1-0.1,0.3-0.2,0.4-0.2c0.2,0,0.3,0,0.5,0.2c0,0,0.3,0.3,0.6,0.6c0.7,0.6,0.8,0.8,0.8,1.1l0,1.5l1.1,0c0.2,0,0.3,0.1,0.4,0.2
+                    c0.1,0.1,0.2,0.3,0.2,0.4l0,1.1l1.1,0c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4l0,1.1L16,18.4C16,18.4,16,18.4,16,18.4z"/>
+                <path class="st0" d="M5.3,7.5c-0.6,0-1.1-0.2-1.5-0.6C2.9,6,2.9,4.6,3.8,3.8c0.4-0.4,1-0.6,1.5-0.6s1.1,0.2,1.5,0.6
+                    c0.9,0.9,0.9,2.2,0,3.1C6.4,7.3,5.9,7.5,5.3,7.5z M5.3,4.4c-0.3,0-0.5,0.1-0.7,0.3C4.3,5,4.3,5.6,4.6,6c0.2,0.2,0.4,0.3,0.7,0.3
+                    C5.6,6.3,5.8,6.2,6,6c0.4-0.4,0.4-1,0-1.3C5.8,4.5,5.6,4.4,5.3,4.4z"/>
+                <path class="st0" d="M17,17.7c-0.2,0-0.3-0.1-0.4-0.2L11,11.9c-0.2-0.2-0.2-0.6,0-0.9c0.2-0.2,0.6-0.2,0.9,0l5.5,5.6
+                    c0.2,0.2,0.2,0.6,0,0.9C17.3,17.6,17.1,17.7,17,17.7z"/></svg>
+	  	  	  	</label>
+            </div>
+            <a class="link" href="./forgotpassword/">Dimenticato la password?</a> 
+            <p>Mai eseguito l'accesso? <a class="link" href="./forgotpassword/">Registrati qui!</a> </p>
+            <a class="Button" id="loginBtn">Accedi</a>
+        </div>
+    </body>
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyCVxbDM1zr0FPpNr-FuYgNaFQVkS4t9N7g",
+          authDomain: "repartoroboris-b18ef.firebaseapp.com",
+          databaseURL: "https://repartoroboris-b18ef-default-rtdb.europe-west1.firebasedatabase.app",
+          projectId: "repartoroboris-b18ef",
+          storageBucket: "repartoroboris-b18ef.appspot.com",
+          messagingSenderId: "1085078472479",
+          appId: "1:1085078472479:web:0c78de56a92da899c7d22a",
+          measurementId: "G-6NBCCXKKLV"
+        };
+      
+        firebase.initializeApp(firebaseConfig);
+      
+        const auth = firebase.auth();
+    </script>
+    <script src="/scripts/auth.js"></script>
+    <script src="/scripts/login.js"></script>
+    <script src="/scripts/registersw.js"></script>
+</html>

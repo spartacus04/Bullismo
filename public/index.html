@@ -1,4 +1,84 @@
+<!DOCTYPE html>
+
 <html>
-  <link rel="stylesheet" href="/styles.css">
-  <h1>STOCAZZO</h1>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contrastare il Bullismo</title>
+        <meta name="description" content="App per inviare le catene del RepartoRoboris">
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.2.6/firebase-functions.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.2.6/firebase-messaging.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.2.6/firebase-storage.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.2.6/firebase-analytics.js"></script>
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+      
+        <link rel="stylesheet" href="/styles/sidebar.css">
+
+        <script src="/scripts/registersw.js"></script>
+    </head>
+    <body>
+        <div class="header"></div>
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
+        <div id="sidebarMenu">
+            <ul class="sidebarMenuInner">
+                <li><span>Informazioni</span></li>
+                <li class="current" id="base"><a onclick="switchiframe('base')">Cos'è il bullismo</a></li>
+                <li id="cyberBullismo"><a onclick="switchiframe('cyberBullying')">CyberBullismo</a></li>
+                <li id="bullyingDay"><a onclick="switchiframe('bullyingDay')">Giornata contro il bullismo</a></li>
+                <li><span>Contrastare il bullismo</span></li>
+                <li id="testimony"><a onclick="switchiframe('testimony')">Due testimonanze</a></li>
+                <li id="contrast"><a onclick="switchiframe('contrast')">Come contrastare il bullismo</a></li>
+                <li id="supporto"><a onclick="switchiframe('supporto')">Parla con noi!</a></li>
+            </ul>
+        </div>
+        <div id='center' class="main">
+        </div>
+        <iframe id="dashiframe" src="./dashboard/base.html" title="base"></iframe>
+    </body>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCVxbDM1zr0FPpNr-FuYgNaFQVkS4t9N7g",
+            authDomain: "repartoroboris-b18ef.firebaseapp.com",
+            databaseURL: "https://repartoroboris-b18ef-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "repartoroboris-b18ef",
+            storageBucket: "repartoroboris-b18ef.appspot.com",
+            messagingSenderId: "1085078472479",
+            appId: "1:1085078472479:web:0c78de56a92da899c7d22a",
+            measurementId: "G-6NBCCXKKLV"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        
+        const auth = firebase.auth();
+    </script>
+    <script src="/scripts/dashboardparams.js"></script>
+    <script src="/scripts/iframeswitch.js"></script>
 </html>
+
+
+
