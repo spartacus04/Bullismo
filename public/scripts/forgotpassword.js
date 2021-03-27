@@ -5,7 +5,7 @@ function resetPassword(){
         try {
             auth.sendPasswordResetEmail(email.value).then(e => {
                 console.log(e);
-                window.location.href = '/';
+                window.location.href = '/dashboard/?page=supporto';
                 alert("ti abbiamo inviato una email per resettare la password");
             })
         } catch (e) {
