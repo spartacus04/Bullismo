@@ -20,7 +20,7 @@ glogin.addEventListener('click', (e) => {
   firebase.auth().useDeviceLanguage();
   auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(() => {
     auth.signInWithPopup(provider).then(result => {
-      console.log(result.credential);
+      console.log(result);
     }).catch((e) => {
       console.log(e);
     })
