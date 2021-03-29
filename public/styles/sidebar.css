@@ -16,7 +16,7 @@ html{ height: 100%;  overflow-x: hidden;}
     width: 100%;
     max-width: 100%;
     box-shadow: none;
-    background-color:  #ffa100;
+    background-color:  #448DE5;
     position: fixed;
     top: 0%;
     height: 60px!important;
@@ -52,7 +52,7 @@ iframe{
     margin-top: 60px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, #ffa100 100%, #039be5 0%);
+    background: linear-gradient(180deg, #039be5 100%, #039be5 0%);
     overflow-y:auto;
 }
 .sidebarMenuInner{
@@ -70,7 +70,7 @@ iframe{
 }
 
 .sidebarMenuInner li.current{
-    background-color: #039be5;
+    background-color: #0056FF;
     cursor: pointer;
 }
 
@@ -117,7 +117,7 @@ input[type=checkbox] {
     position: absolute;
     height: 3px;
     width: 100%;
-    background-color: #039be5;
+    background-color: #fff;
 }
 .horizontal {
     transition: all 0.3s;
