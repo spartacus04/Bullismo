@@ -19,7 +19,7 @@ msgerForm.addEventListener("submit", event => {
         var newData = data;
         var messages = 0;
         for(const doc in data){
-            messages++;
+          messages++;
         }
         newData["message" + messages] = "User§" + msgText;
         firestore.collection('chats').doc(auth.currentUser.uid).set(newData);
